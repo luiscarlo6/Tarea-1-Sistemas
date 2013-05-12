@@ -19,5 +19,7 @@ int caja_linkAnt(caja *c,caja *sig);
 
 void aumentarIncidencias(caja *c);
 
+int compararCaja(caja *c1, caja *c2);
+
 void caja_free(caja *c);
 #endif
