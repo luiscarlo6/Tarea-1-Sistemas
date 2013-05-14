@@ -13,13 +13,22 @@ typedef struct Caja{
 
 caja* caja_crear(void* e);
 
-int caja_linkSiguiente(caja *c,caja *sig);
+caja* caja_sig(caja *c);
 
-int caja_linkAnt(caja *c,caja *sig);
+caja* caja_ant(caja *c);
 
-void aumentarIncidencias(caja *c);
+int caja_incidencias(caja *c);
+
+void* caja_elemento(caja *c);
+
+int caja_linkSig(caja *c,caja *sig);
+
+int caja_linkAnt(caja *c,caja *ant);
+
+int aumentarIncidencias(caja *c);
 
 int compararCaja(caja *c1, caja *c2);
 
 void caja_free(caja *c);
+
 #endif
