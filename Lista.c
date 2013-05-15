@@ -75,7 +75,7 @@ int lista_tam(lista *l){
     }
 }
 
-int lista_ordenar(lista *l);
+int lista_agregar_ordenado(lista *l, caja *c);
 
 int lista_free(lista*l);
 

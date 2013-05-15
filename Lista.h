@@ -15,7 +15,7 @@ lista * lista_crear();
 
 int lista_agregar(lista *l, void* e);
 
-int lista_ordenar(lista *l);
+int lista_agregar_ordenado(lista *l, caja *c);
 
 int lista_free(lista *l);
 
