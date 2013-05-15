@@ -62,11 +62,10 @@ void lista_imprimir(lista *l){
     caja *c = l->primero;
     while (i!=l->tam){
         char *s = c->elem;
-        printf("%s %d, ",s,caja_incidencias(c));
+        printf("%s %d\n",s,caja_incidencias(c));
         c = caja_sig(c);
         i++;
     }
-    printf("\n");
 }
 
 int lista_tam(lista *l){
