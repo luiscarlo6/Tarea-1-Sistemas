@@ -44,8 +44,7 @@ caja* caja_ant(caja *c){
     return NULL;
 }
 
-int caja_linkSig(caja *c,caja *sig){
-    
+int caja_linkSig(caja *c,caja *sig){    
     if (c==NULL || sig==NULL){
         return -1;
     }
@@ -96,6 +95,5 @@ int compararCaja(caja *c1, caja *c2){
 }
 
 void caja_free(caja *c){
-    free(c->elem);
     free(c);
 }

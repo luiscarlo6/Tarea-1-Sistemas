@@ -8,6 +8,7 @@
 typedef struct{
     int tam;
     caja *primero;
+    caja *ultimo;
 }lista;
 
 lista * lista_crear();
@@ -16,6 +17,10 @@ int lista_agregar(lista *l, void* e);
 
 int lista_ordenar(lista *l);
 
-int lista_free(lista*l);
+int lista_free(lista *l);
+
+void lista_imprimir(lista *l);
+
+int lista_tam(lista *l);
 
 #endif
