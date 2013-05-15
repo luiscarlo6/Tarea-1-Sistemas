@@ -6,9 +6,9 @@
 #define __LISTA_H__
 
 typedef struct{
-    int tam;
-    caja *primero;
-    caja *ultimo;
+	int tam;
+	caja *primero;
+	caja *ultimo;
 }lista;
 
 lista * lista_crear();
