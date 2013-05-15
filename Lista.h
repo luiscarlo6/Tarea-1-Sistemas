@@ -15,11 +15,13 @@ lista * lista_crear();
 
 int lista_agregar(lista *l, void* e);
 
-int lista_agregar_ordenado(lista *l, caja *c);
+int lista_agregar_ordenado(lista *l, void* e, int incidencias);
 
 int lista_free(lista *l);
 
 void lista_imprimir(lista *l);
+
+lista * lista_ordenar(lista *l);
 
 int lista_tam(lista *l);
 

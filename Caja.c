@@ -94,6 +94,15 @@ int compararCaja(caja *c1, caja *c2){
     
 }
 
+int cambiarIncidencias(caja *c, int i){
+    if (c==NULL){
+        return -1;
+    }
+    
+    c->incidencias = i;
+    return 0;
+}
+
 void caja_free(caja *c){
     free(c);
 }

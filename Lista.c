@@ -75,7 +75,64 @@ int lista_tam(lista *l){
     }
 }
 
-int lista_agregar_ordenado(lista *l, caja *c);
+int lista_agregar_ordenado(lista *l, void* e, int incidencias){
+    if (l==NULL){
+        return -1;
+    }
+    caja *c = caja_crear(e);
+    cambiarIncidencias(c,incidencias);
+    if(c==NULL){
+        return -1;
+    }
+    
+    if(l->tam==0){
+        l->primero = c;
+        l->ultimo = c;
+        l->tam++;        
+        return 0;
+    }
+    
+    int i = 0;
+    caja *aux = l->primero;
+    int incidenciasC = caja_incidencias(c);
+    
+    while (i!=l->tam){
+        
+        int incidenciasAux = caja_incidencias(aux);
+        
+        if (incidenciasAux<incidenciasC){
+            if (i == 0){
+                l->primero = c;
+            }
+            caja *ant = caja_ant(aux);
+            caja_linkSig(c,aux);
+            caja_linkSig(ant,c);
+            l->tam++;
+            break;
+        }
+        aux = caja_sig(aux);
+        i++;
+    }
+
+    if (i==(l->tam)){
+        caja_linkSig(l->ultimo,c);
+        l->ultimo = c;
+        l->tam++;
+        return 0;
+    }
+}
+
+lista * lista_ordenar(lista *l){
+    lista *ord = lista_crear();
+    int i = 0;
+    caja *aux = l->primero;
+    while (i!=l->tam){
+        lista_agregar_ordenado(ord,caja_elemento(aux),caja_incidencias(aux));
+        aux = caja_sig(aux);
+        i++;
+    }
+   return ord;
+}
 
 int lista_free(lista*l);
 

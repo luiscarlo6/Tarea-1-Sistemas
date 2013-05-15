@@ -15,34 +15,43 @@ int main(int argc, char **argv)
     caja *caja2 = caja_crear(&p2);
 
     lista *l = lista_crear();
-    printf("\n%d\n",lista_tam(l));
+    
     if (l==NULL){
         return -1;
     }
     //lista_agregar(l, NULL);
     lista_agregar(l, p1);
-    printf("\n%d\n",lista_tam(l));
-    lista_agregar(l, &p1);
-    lista_agregar(l, &p1);
-    lista_agregar(l, &p1);
-    lista_agregar(l, &p1);
-    lista_agregar(l, &p1);
-    lista_agregar(l, &p1);
-    lista_agregar(l, &p1);
-    lista_agregar(l, &p1);
-    lista_agregar(l, &p1);
-    lista_agregar(l, &p2);
-    lista_agregar(l, &p2);
-    lista_agregar(l, &p2);
-    lista_agregar(l, &p2);
-    lista_agregar(l, &p2);
-    printf("\n%d\n",lista_tam(l));
+    
+    lista_agregar(l, &p4);
     lista_agregar(l, &p3);
-    printf("\n%d\n",lista_tam(l));
+    lista_agregar(l, &p2);
+    lista_agregar(l, &p1);
+    lista_agregar(l, &p3);
+    lista_agregar(l, &p3);
+    lista_agregar(l, &p3);
+    lista_agregar(l, &p3);
+    lista_agregar(l, &p3);
+    lista_agregar(l, &p2);
+    lista_agregar(l, &p2);
+    lista_agregar(l, &p2);
+    lista_agregar(l, &p2);
+    lista_agregar(l, &p2);
+    
+    lista_agregar(l, &p3);
+    
     lista_agregar(l, &p3);
     lista_agregar(l, &p4);
-    printf("\n%d\n",lista_tam(l));
+    lista_agregar(l, &p4);
+    lista_agregar(l, &p4);
+    lista_agregar(l, &p4);
+    lista_agregar(l, &p4);
+                    
+
+    
+    
+    lista *ord = lista_ordenar(l);
     
     lista_imprimir(l);
+    lista_imprimir(ord);
 }
 

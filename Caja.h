@@ -25,6 +25,8 @@ int caja_linkSig(caja *c,caja *sig);
 
 int caja_linkAnt(caja *c,caja *ant);
 
+int cambiarIncidencias(caja *c, int i);
+
 int aumentarIncidencias(caja *c);
 
 int compararCaja(caja *c1, caja *c2);
