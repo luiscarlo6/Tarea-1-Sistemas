@@ -5,10 +5,10 @@
 #define __CAJA_H__
 
 typedef struct Caja{
-	void* elem;
-	int incidencias;
-	struct Caja *sig;
-	struct Caja *ant;
+    void* elem;
+    int incidencias;
+    struct Caja *sig;
+    struct Caja *ant;
 }caja;
 
 caja* caja_crear(void* e);
