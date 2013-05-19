@@ -2,12 +2,39 @@
 #include <stdlib.h>
 #include "Caja.h"
 
+/**
+ * Archivo : Lista.h
+ * Define una lista doblemente enlazada con apuntador
+ * al primer y ultimo elemento
+ * Autor : Luiscarlo Rivera
+ */
+
 #ifndef __LISTA_H__
 #define __LISTA_H__
 
+/**
+ * Estructura de cabeza de lista
+ * 
+ * elementos :  
+ *     
+ *                            contiene el primer elemento
+ *              caja *ultimo apuntador a la caja que
+ *                           contiene el ultimo elemento
+ */
 typedef struct{
+    /**
+     * int tam tamaño dela lista
+     */
     int tam;
+    /**
+     * caja *primero apuntador a la caja que
+     * contiene el primer elemento
+     */
     caja *primero;
+    /**
+     * caja *primero apuntador a la caja que
+     * contiene el ultimo elemento
+     */
     caja *ultimo;
 }lista;
 

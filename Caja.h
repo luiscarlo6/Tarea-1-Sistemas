@@ -1,13 +1,36 @@
 #include <stdio.h>
 #include <stdlib.h>
 
+/**
+ * archivo Caja.h
+ * define una Caja para guardar un elemento
+ * con apuntador a una caja siguiente y anterior *  
+ * Autor : Luiscarlo Rivera
+ */
+
 #ifndef __CAJA_H__
 #define __CAJA_H__
 
+/**
+ * estructura que define una caja para
+ * una lista doblemente enlazada
+ */
 typedef struct Caja{
-    void* elem;
+    /**
+     *void* elem elemento que guarda la caja
+     */
+    void* elem; 
+    /**
+     *int incidencias numero de veces que esta el elemento en la caja
+     */
     int incidencias;
+    /**
+     *struct Caja *sig apuntador a la Caja siguiente
+     */
     struct Caja *sig;
+    /**
+     *struct Caja *ant apuntador a la Caja siguiente
+     */
     struct Caja *ant;
 }caja;
 

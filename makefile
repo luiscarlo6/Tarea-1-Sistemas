@@ -1,5 +1,10 @@
+#Makefile
+#Archivo usado para compilar el programa
+#Autor : Luiscarlo Rivera
+#basado en los makefile de ejemplos de aula virtual
+
 CC = gcc 
-CFLAGS1 = -ansi -Wabi -g -ggdb -gstabs -Wall -Wextra -pedantic -pedantic-errors \
+CFLAGS1 = -D_GNU_SOURCE -ansi -Wabi -g -ggdb -gstabs -Wall -Wextra -pedantic -pedantic-errors \
           -Wswitch-default -Wswitch-enum -Wmain \
         -Wmissing-include-dirs -Wmissing-declarations -Wunreachable-code \
         -Winline -Wfloat-equal -Wundef -Wcast-align -Wredundant-decls \
